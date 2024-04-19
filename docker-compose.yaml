@@ -1,0 +1,19 @@
+services:
+  rabbitmq1:
+    image: rabbitmq
+    container_name: rabbitmq1
+    environment:
+      - RABBITMQ_SERVER_ADDITIONAL_ERL_ARGS=-rabbit log_levels [{connection,error},{default,error}]
+    ports:
+      - 5672:5672
+      - 15672:15672
+      - 25672:25672
+    hostname: rmq01
+    volumes:
+      - ./rabbitmq:/var/lib/rabbitmq
+    networks:
+      - rabbitmq
+
+networks:
+  rabbitmq:
+    driver: bridge
