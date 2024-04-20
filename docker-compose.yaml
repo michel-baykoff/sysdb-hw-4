@@ -10,6 +10,7 @@ services:
     hostname: rmq01
     volumes:
       - ./rabbitmq:/var/lib/rabbitmq
+      - ./.erlang.cookie:/var/lib/rabbitmq/.erlang.cookie:ro
     networks:
       - rabbitmq
   
@@ -23,6 +24,7 @@ services:
     hostname: rmq02
     volumes:
       - ./rabbitmq2:/var/lib/rabbitmq
+      - ./.erlang.cookie:/var/lib/rabbitmq/.erlang.cookie:ro
     networks:
       - rabbitmq
 
