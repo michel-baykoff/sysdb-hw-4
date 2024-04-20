@@ -8,10 +8,9 @@ services:
       - 5672:5672
       - 15672:15672
     hostname: rmq01
-#    command: bash -c "apt update && apt -y install iputils-ping && ./"
     volumes:
       - ./rabbitmq:/var/lib/rabbitmq
-      - ./.erlang.cookie:/var/lib/rabbitmq/.erlang.cookie:ro
+      - ./erlang.cookie:/var/lib/rabbitmq/.erlang.cookie:ro
     networks:
       - rabbitmq
   
@@ -25,7 +24,7 @@ services:
     hostname: rmq02
     volumes:
       - ./rabbitmq2:/var/lib/rabbitmq
-      - ./.erlang.cookie:/var/lib/rabbitmq/.erlang.cookie:ro
+      - ./erlang.cookie:/var/lib/rabbitmq/.erlang.cookie:ro
     networks:
       - rabbitmq
 
