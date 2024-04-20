@@ -8,9 +8,7 @@ services:
       - 5672:5672
       - 15672:15672
     hostname: rmq01
-    command: apt update
-    command: apt -y install iputils-ping
-    command:
+#    command: bash -c "apt update && apt -y install iputils-ping && ./"
     volumes:
       - ./rabbitmq:/var/lib/rabbitmq
       - ./.erlang.cookie:/var/lib/rabbitmq/.erlang.cookie:ro
@@ -25,9 +23,6 @@ services:
     ports:
       - 5673:5672
     hostname: rmq02
-    command: apt update
-    command: apt -y install iputils-ping
-    command:
     volumes:
       - ./rabbitmq2:/var/lib/rabbitmq
       - ./.erlang.cookie:/var/lib/rabbitmq/.erlang.cookie:ro
