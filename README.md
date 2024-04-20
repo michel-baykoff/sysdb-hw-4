@@ -75,9 +75,12 @@ $ rabbitmqadmin get queue='hello'
 
 ### Решение 3
 ![cluster](img/05.png)
-![policy](img/06.png)
-[Вывод "rabbitmqctl cluster_status" на rmq01](/rmq01_cluster_status.log)
-[Вывод "rabbitmqctl cluster_status" на rmq02](/rmq02_cluster_status.log)
+![policy](img/06.png)   
+
+[Вывод "rabbitmqctl cluster_status" на rmq01](/rmq01_cluster_status.log)   
+
+[Вывод "rabbitmqctl cluster_status" на rmq02](/rmq02_cluster_status.log)   
+
 ![getqueue_rmq01](img/07.png)
 ![getqueue_rmq02](img/08.png)
 
