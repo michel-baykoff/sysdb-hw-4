@@ -8,7 +8,8 @@
 *Итогом выполнения домашнего задания будет приложенный скриншот веб-интерфейса RabbitMQ.*
 
 ### Решение 1
-![elastic](img/01.png)
+![docker](img/01.png)
+![RabbitMQ](img/02.png)
 
 
 ---
@@ -33,7 +34,8 @@ $ pip install pika
 Для закрепления материала можете попробовать модифицировать скрипты, чтобы поменять название очереди и отправляемое сообщение.
 
 ### Решение 2
-![Kibana](img/02.png)
+![produced](img/03.png)
+![produced](img/04.png)
 
 
 ---
@@ -72,7 +74,15 @@ $ rabbitmqadmin get queue='hello'
 *Приложите скриншот результата работы второго скрипта.*
 
 ### Решение 3
-![KibanaNginx](img/03.png)
-![KibanaNginx](img/04.png)
-![KibanaNginx](img/05.png)
+![cluster](img/05.png)
+![policy](img/06.png)
+[Вывод "rabbitmqctl cluster_status" на rmq01](/rmq01_cluster_status.log)
+[Вывод "rabbitmqctl cluster_status" на rmq02](/rmq02_cluster_status.log)
+![getqueue_rmq01](img/07.png)
+![getqueue_rmq02](img/08.png)
 
+Отключаем первую ноду:
+![rmq01_down](img/09.png)
+
+Читаем из очереди со второй ноды:
+![rmq02_consume](img/10.png)
